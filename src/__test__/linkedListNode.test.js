@@ -14,6 +14,12 @@ describe('linkedListNode', () => {
         expect(newNode.nextNode).toBeNull();
     });
 
+    test('should create linkedListNode with null', () => {
+        const newNode = new LinkedListNode(1, null);
+        expect(newNode.value).toBe(1);
+        expect(newNode.nextNode).toBeNull();
+    });
+
     test('should create linkedListNode with link', () => {
         const newNode1 = new LinkedListNode(1);
         const newNode2 = new LinkedListNode(2, newNode1);
@@ -61,4 +67,4 @@ describe('linkedListNode', () => {
 
         expect(newNode.getValue().key).toBe(100);
     });
-})
+});
